@@ -54,18 +54,26 @@ class Window(QMainWindow, Ui_MainWindow):
                 res = connect(word)
                 # print(type(res))
                 # json_obj = json.loads(res)
-                outputWord = {
-                    'word': res['query'],
-                    'translation': res.get('web'),
-                    'pronounce-us': res.get('basic').get('us-phonetic'),
-                    'pronounce-uk': res.get('basic').get('uk-phonetic'),
-                       }
+                try:
+                    outputWord = {
+                        'word': res['query'],
+                        'translation': res.get('web'),
+                        'pronounce-us': res.get('basic').get('us-phonetic'),
+                        'pronounce-uk': res.get('basic').get('uk-phonetic'),
+                           }
+                except:
+                    outputWord = {
+                        'word': res['query'],
+                        'translation': '',
+                        'pronounce-us': '',
+                        'pronounce-uk': '',
+                    }
                 buffer_str = ''
-                for word in res.get('web'):
+                for word in outputWord.get('translation'):
                     buffer_str += f"{word.get('key')}: {','.join(word.get('value'))}\n"
                     break
                     # buffer_str += f"{','.join(word.get('value'))}\n"
-                self.tableWidget_2.setItem(row, 1, QTableWidgetItem(str(f"[{res.get('basic').get('us-phonetic')}]")))
+                self.tableWidget_2.setItem(row, 1, QTableWidgetItem(str(f"[{outputWord.get('pronounce-us')}]")))
                 self.tableWidget_2.setItem(row, 2, QTableWidgetItem(buffer_str))
                 self.result_list.append(outputWord)
         else:
