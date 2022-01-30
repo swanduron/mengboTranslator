@@ -12,7 +12,7 @@
   </property>
   <property name="font">
    <font>
-    <family>Avenir</family>
+    <family>微软雅黑 Light</family>
     <pointsize>14</pointsize>
    </font>
   </property>
@@ -145,6 +145,12 @@
        </item>
        <item>
         <widget class="QTableWidget" name="tableWidget_2">
+         <property name="font">
+          <font>
+           <family>微软雅黑 Light</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <column>
           <property name="text">
            <string>Word</string>
@@ -198,11 +204,48 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>24</height>
+     <height>31</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuAboutMe">
+    <property name="title">
+     <string>AboutMe</string>
+    </property>
+    <addaction name="actionAbout_mengboTranslator"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuAboutMe"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout_mengboTranslator">
+   <property name="text">
+    <string>About mengboTranslator</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑 Light</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑 Light</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

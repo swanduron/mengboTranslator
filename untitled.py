@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'untitled.ui'
+# Form implementation generated from reading ui file '.\untitled.ui'
 #
 # Created by: PyQt6 UI code generator 6.2.2
 #
@@ -14,7 +14,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 751)
         font = QtGui.QFont()
-        font.setFamily("Avenir")
+        font.setFamily("微软雅黑 Light")
         font.setPointSize(14)
         MainWindow.setFont(font)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -77,6 +77,10 @@ class Ui_MainWindow(object):
         self.label_8.setObjectName("label_8")
         self.horizontalLayout_5.addWidget(self.label_8)
         self.tableWidget_2 = QtWidgets.QTableWidget(self.groupBox_2)
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑 Light")
+        font.setPointSize(14)
+        self.tableWidget_2.setFont(font)
         self.tableWidget_2.setObjectName("tableWidget_2")
         self.tableWidget_2.setColumnCount(3)
         self.tableWidget_2.setRowCount(0)
@@ -102,12 +106,30 @@ class Ui_MainWindow(object):
         self.verticalLayout.addLayout(self.horizontalLayout_3)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 24))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 31))
         self.menubar.setObjectName("menubar")
+        self.menuAboutMe = QtWidgets.QMenu(self.menubar)
+        self.menuAboutMe.setObjectName("menuAboutMe")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.actionAbout_mengboTranslator = QtGui.QAction(MainWindow)
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑 Light")
+        font.setPointSize(10)
+        self.actionAbout_mengboTranslator.setFont(font)
+        self.actionAbout_mengboTranslator.setObjectName("actionAbout_mengboTranslator")
+        self.actionExit = QtGui.QAction(MainWindow)
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑 Light")
+        font.setPointSize(10)
+        self.actionExit.setFont(font)
+        self.actionExit.setObjectName("actionExit")
+        self.menuAboutMe.addAction(self.actionAbout_mengboTranslator)
+        self.menuAboutMe.addSeparator()
+        self.menuAboutMe.addAction(self.actionExit)
+        self.menubar.addAction(self.menuAboutMe.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -133,6 +155,11 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "Start"))
         self.pushButton_4.setText(_translate("MainWindow", "Stop"))
         self.pushButton_5.setText(_translate("MainWindow", "Save"))
+        self.menuAboutMe.setTitle(_translate("MainWindow", "AboutMe"))
+        self.actionAbout_mengboTranslator.setText(_translate("MainWindow", "About mengboTranslator"))
+        self.actionAbout_mengboTranslator.setShortcut(_translate("MainWindow", "Ctrl+A"))
+        self.actionExit.setText(_translate("MainWindow", "Exit"))
+        self.actionExit.setShortcut(_translate("MainWindow", "Ctrl+Q"))
 
 
 if __name__ == "__main__":

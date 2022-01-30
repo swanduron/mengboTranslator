@@ -3,12 +3,12 @@ import uuid
 import requests
 import hashlib
 import time
-from imp import reload
+# from imp import reload
 import json
 
 import time
 
-reload(sys)
+# reload(sys)
 
 YOUDAO_URL = 'https://openapi.youdao.com/api'
 APP_KEY = '0cb9e41da38052c8'
