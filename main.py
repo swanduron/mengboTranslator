@@ -68,8 +68,8 @@ class Window(QMainWindow, Ui_MainWindow):
                 try:
                     res = connect(word)
                 except Exception as e:
-                    QMessageBox.warning(self, '异常捕获', f'请截图报送孙海涛\n{str(e)}')
-                    continue
+                    QMessageBox.warning(self, '异常捕获', f'HTTP链接管理系统出错，请截图报送孙海涛\n{str(e)}')
+                    break
                 try:
                     outputWord = {
                         'word': res['query'],
